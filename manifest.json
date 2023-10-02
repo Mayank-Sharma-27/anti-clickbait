@@ -1,0 +1,30 @@
+{
+    "manifest_version": 2,
+    "name": "YouTube Video Analyzer",
+    "version": "1.0",
+    "description": "Analyze and summarize YouTube videos.",
+    "permissions": [
+      "activeTab",
+      "storage"
+    ],
+    "browser_action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+      }
+    },
+    "icons": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://*.youtube.com/*"],
+        "js": ["contentScript.js"]
+      }
+    ]
+  }
+  
